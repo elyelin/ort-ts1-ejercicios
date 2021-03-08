@@ -40,17 +40,17 @@ public class Agenda {
 	}
 	
 	private Contacto buscar(String nombre) {
-		Contacto contacto = null;
+		Contacto telefono = null;
 		int index = 0;
-		Contacto contactoAux;
-		while (contacto == null && index<this.contactos.size()) {
-			contactoAux = this.contactos.get(index);
-			if (contactoAux.getNombre().equals(nombre)) {
-				contacto = contactoAux;
+		
+		while (telefono == null && index < this.telefonos.size()) {
+			if (this.telefonos.get(index).getNombre().equals(nombre)) {
+				telefono = this.telefonos.get(index);
 			}
 			index++;
 		}
-		return contacto;
+			
+		return telefono;
 	}
 	
 	public void borrar(String nombre) {
